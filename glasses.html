@@ -20,6 +20,7 @@
 			top:0;
 			background:white;
 			z-index:9;
+			box-shadow: -6px 0 white, 6px 0 white, 0 7px 5px -1px black;
 		}
 
 		div{
@@ -57,6 +58,7 @@
 		}
 
 		#icon-s {
+		margin-top:-4px;
 		height:40px;
 		width:40px;
 
@@ -87,35 +89,22 @@
 	}
 
 	#de {
+		font-size:34px;
 		position:absolute;
-		margin-top:160px;
+		margin-top:-200px;
+		margin-left: 500px;
 	}
 
-	/*	cards o*/
+	#ss {
+		font-size:25px;
+		position:absolute;
+		margin-top:-150px;
+		margin-left: 500px;
+	}
 
-	/*#div-7{
-			display: flex;
-			background-color:white;
-			margin-left:220px ;
-			width:900px;
-		}*/
-
-
-		#ca1{
-			border:2px solid green;
-			background-color:white;
-			display:flex;
-		}
-
-		#ca-a{
-			border:2px solid red;
-			width:300px;
-		}
-
-		#ca-b{
-			border:2px solid red;
-			width:1200px;
-		}
+	#div-A{
+		background:white;
+	}
 
 	/*lower div o*/
 
@@ -179,11 +168,87 @@
 	
 
 	/*footer c*/
+
+
+	.flex {
+		display: flex;
+		flex-direction: row;
+/*		height:200px;*/
+		padding:0;
+		background:white;
+	}
+
+	.left {
+		background: #FFE7C7;
+		width:20%;
+		height:100%;
+	}
+	.right {
+		background:white;
+		width:80%;
+		border-left:1px solid grey;
+	}
+
+	.ca-1{
+		display: flex;
+		background:white;
+	}
+
+	.crd {
+		background:white;
+		margin-right:10px;
+	}
+
+	.in1,.in2,.in3{
+		text-align: left;
+		background: #FFE7C7;
+	}
+
+	#payway{
+      	width:60px;
+      	height:40px;
+      }
+
+	@media(max-width:500px)
+	{
+		.flex {
+			flex-direction: column;
+		}
+
+		.left {
+			width: 100%;
+		}
+
+		.right {
+			width: 100%;
+			height: 100%;
+		}
+
+		.ca-1{
+			flex-direction: column;
+		}
+
+		#de{
+			margin-left:120px;
+			font-size:30px;
+		}
+
+		#ss{
+			margin-left:110px;
+			font-size:21px;
+		}
+	}
+
+	h3 :hover{
+		background:pink;
+	}
+
+
+
 	</style>
 </head>
 <body>
-	<hr style="border-top:5px solid black;">
-	<header>
+		<header>
 		<div id="div-2">
 			<img src="copy.png" id="title">
 		</div>
@@ -191,8 +256,8 @@
 		<h2><a id="head-a" href="glasses.html">Glasses</a></h2>
 		<h2><a id="head-a" href="sungl.html">Sunglasses</a></h2>
 		<h2><a id="head-a" href="lenses.html">Lenses</a></h2>
-		<h2><a id="head-a" href="brands.html">Brands</a></h2>
-		<h2><a id="head-a" href="contacts.html">Contacts</a></h2>
+		<h2><a id="head-a" href="#brn">Brands</a></h2>
+		<h2><a id="head-a" href="helpcenter.html">Contacts</a></h2>
 
 		<div id="div-3">
 			<input id="input-1" type="text" name="" placeholder="search over 70,000 products...">
@@ -211,54 +276,156 @@
 		<p id="de">Designer Eyeglasses</p>
 		<p id="ss">Standard Single Lenses Included</p>
 		
-		
 	</div>
 
 	<!-- div for cards -->
 
-	<div id="ca1">
-		<div id="ca-a">
-			<h3>MEN</h3>
-			<h3>WOMEN</h3>
-			<h3>KIDS</h3>
+	<div class="two-container flex">
+		<div class="left flex-item">
+
+			<h3>Gender</h3>
+			<div class="in1">
+				<input type="radio" name="gender" value="men">    MEN <br><br>
+				<input type="radio" name="gender" value="women">   WOMEN <br><br>
+				<input type="radio" name="gender" value="kids">   KIDS <br><br>
+			</div>
+
+			<hr style="border-color:grey;">
+			<h3>Glasses</h3>
+			<div class="in2">
+				<input type="radio" name="glass" value="eyegl">  EYEGLASSES<br><br>
+				<input type="radio" name="glass" value="sungl">   SUNGLASSES<br><br>
+				<input type="radio" name="glass" value="computergl">  COMPUTER GLASSES<br><br>
+				<input type="radio" name="glass" value="readinggl">  READING GLASSES<br><br>
+				<input type="radio" name="glass" value="lenses">  LENSES<br><br>
+			</div>
+
+			<hr style="border-color:grey;">
+			<h3>Brands</h3>
+			<div class="in3" id="brn">
+				<input type="radio" name="brand" value="men">    M <br><br>
+				<input type="radio" name="brand" value="women">   W<br><br>
+				<input type="radio" name="brand" value="kids">   K <br><br>
+			</div>
 		</div>
 
-		<div id="ca-b">
-			ashjah
-			sdhjdhj
+		<div class="right flex-item">
+
+			<!-- first -->
+			<div class="ca-1">
+				<div class="w3-contaioner crd w3-hover-shadow">
+					<img src="pi1.jpg">
+					<pre>kensington
+Rs. 1950</pre>
+				</div>
+
+				<div class="w3-contaioner crd w3-hover-shadow">
+					<img src="pi2.png">
+					<pre>kensington
+Rs. 1950</pre>
+				</div>
+
+				<div class="w3-contaioner crd w3-hover-shadow">
+					<img src="pi1.jpg">
+					<pre>kensington
+Rs. 1950</pre>
+				</div>
+
+			</div>
+			<br>
+			<!-- second -->
+			<div class="ca-1">
+				<div class="w3-contaioner crd w3-hover-shadow">
+					<img src="pi1.jpg">
+					<pre>kensington
+Rs. 1950</pre>
+				</div>
+
+				<div class="w3-contaioner crd w3-hover-shadow">
+					<img src="pi1.jpg">
+					<pre>kensington
+Rs. 1950</pre>
+				</div>
+
+				<div class="w3-contaioner crd w3-hover-shadow">
+					<img src="pi1.jpg">
+					<pre>kensington
+Rs. 1950</pre>
+				</div>
+			</div>
+			<br>
+			<!-- third -->
+			<div class="ca-1">
+				<div class="w3-contaioner crd w3-hover-shadow">
+					<img src="pi1.jpg">
+					<pre>kensington
+Rs. 1950</pre>
+				</div>
+
+				<div class="w3-contaioner crd w3-hover-shadow">
+					<img src="pi1.jpg">
+					<pre>kensington
+Rs. 1950</pre>
+				</div>
+
+				<div class="w3-contaioner crd w3-hover-shadow">
+					<img src="pi1.jpg">
+					<pre>kensington
+Rs. 1950</pre>
+				</div>
+
+			</div>
+			<br>
+			<!-- fourth -->
+			<div class="ca-1">
+				<div class="w3-contaioner crd w3-hover-shadow">
+					<img src="pi1.jpg">
+					<pre>kensington
+Rs. 1950</pre>
+			</div>
+
+				<div class="w3-contaioner crd w3-hover-shadow">
+					<img src="pi1.jpg">
+					<pre>kensington
+Rs. 1950</pre>
+				</div>
+
+				<div class="w3-contaioner crd w3-hover-shadow">
+					<img src="pi1.jpg">
+					<pre>kensington
+Rs. 1950</pre>
+				</div>
+
+			</div>
+			<br>
+			<!-- fifth -->
+			<div class="ca-1">
+				<div class="w3-contaioner w3-col 14 m6 s12  crd w3-hover-shadow">
+					<img src="pi1.jpg">
+					<pre>kensington
+Rs. 1950</pre>
+			</div>
+
+				<div class="w3-contaioner crd w3-hover-shadow">
+					<img src="pi1.jpg">
+					<pre>kensington
+Rs. 1950</pre>
+				</div>
+
+				<div class="w3-contaioner crd w3-hover-shadow">
+					<img src="pi1.jpg">
+					<pre>kensington
+Rs. 1950</pre>
+				</div>
+
+			</div>
+
 		</div>
 	</div>
-
-	<!-- <div id="">
-
-	<div id="div-7">
-		<div class="w3-card-4 w3-hover-shadow w3-hover-opacity w3-margin-left">
-  			<img src="g6.jpeg" alt="Alps" style="width:250px; height:270px;">
-  			<div class="w3-container w3-center w3-cursive">
-  			<p id="div-p">EyeGlasses</p>
-  			</div>
-		</div>
-
-		<div class="w3-card-4 w3-hover-shadow w3-hover-opacity w3-margin-left">
-  			<img src="g9.jpeg" alt="Alps" style="width:250px; height:270px;">
-  			<div class="w3-container w3-center w3-cursive">
-  			<p id="div-p">SunGlasses</p>
-  			</div>
-		</div>
-
-		<div class="w3-card-4 w3-hover-shadow w3-hover-opacity w3-margin-left">
-  			<img src="g8.jpeg" alt="Alps" style="width:250px; height:270px;">
-  			<div class="w3-container w3-center w3-cursive">
-  			<p id="div-p">Computer Glasses</p>
-  			</div>
-		</div>
-
-	</div>
- -->
-		<br>
-
+	
+	
 <!-- bottom div -->
-
+	<br>
 	<div id="lower-div">
 		<h4>FOLLOW US ON</h4>
 		<br>
@@ -288,42 +455,46 @@ join for exclusive offer & discount!</b></pre>
 				<tr>
 					<td></td>
 					<td colspan="2" align="left">CONTACT WITH US</td>
-					<td></td>
+					<td align="left">WE ACCEPT</td>
 				</tr>
-				
+
 				<tr>
 					<td>Philipps-Universitat Marburg</td>
 					<td><i class="fa fa-phone"></i></td>
 					<td align="left">+045-333-045</td>
-					<td>ghahhh</td>
+					<td><img align="left" id="payway" src="visa.jpg"></td>
 				</tr>
 
 				<tr>
 					<td>Biegenstrabe 10</td>
-					<td><i class="fa fa-clock"></td>
+					<td><i class="fas fa-clock-o"></td>
 					<td align="left">10AM to 7PM</td>
-					<td>ghahhh</td>
+					<td><img align="left" id="payway" src="paypal.jpg"></td>
 				</tr>
 
 				<tr>
 					<td>35037 Marburg</td>
 					<td><i class="fa fa-whatsapp"></i></td>
 					<td align="left">71*****670</td>
-					<td>ghahhh</td>
+					<td><img align="left" id="payway" src="paytm.png"></td>
 				</tr>
 
 				<tr>
 					<td></td>
 					<td><i class="fa fa-telegram"></i></td>
 					<td align="left">Focus Eyefit</td>
-					<td>ghahhh</td>
+					<td><img align="left" id="payway" src="master.png"></td>
 				</tr>
 
 				<tr>
 					<td></td>
 					<td><i class="fa fa-envelope"></i></td>
 					<td align="left">focuseyefit@12.com</td>
-					<td>ghahhh</td>
+					<td><img align="left" id="payway" src="phnpay.jpg"></td>
+				</tr>
+
+				<tr>
+					<td colspan="4">Focus Eyefit &#8482; Group Copyright &#169; All Rights Reserved</td>
 				</tr>
 			</table>
 

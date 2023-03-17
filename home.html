@@ -16,6 +16,12 @@
 		body {
 			margin: 0px;
 		}
+
+		#icon-s{
+			margin-top:-4px;
+			width: 40px;
+			height:40px;
+		}
 		#div-2{
 			background-color: black;
 			color: white;
@@ -32,7 +38,7 @@
 			top:0;
 			background:white;
 			z-index:9;
-			
+			box-shadow: -6px 0 white, 6px 0 white, 0 7px 5px -1px black;
 		}
 
 		div{
@@ -93,15 +99,18 @@
 			height:50px;
 			width:100px;
 			border-radius:10px;
+			box-shadow: 0 10px 20px rgba(184, 184, 255, 0.5);
 		}
 
 		#btn1:hover {
 			background-color: whitesmoke;
 			color: skyblue;
+			box-shadow: 0 5px 10px rgba(184, 184, 255, 0.4);
+  			transform: translateY(1px);
 		}
 
 		#div-4{
-			transform:translate(600px,150px);
+			transform:translate(660px,50px);
 			width:500px;
 			padding:15px;
 			background: transparent;
@@ -158,7 +167,6 @@
 		#lower-div {
 /*			border: 2px solid red;*/
 			display: flex;
-
 			}
 
 		#head-a{
@@ -224,6 +232,7 @@
 		#tab1 {
 			width:1330px;
 			font-size:20px;
+			font-family:cursive;
 		}
 
 		#div-9{
@@ -232,30 +241,101 @@
 			width:1185px;
 		}
 
-		#div-10{
-			display: flex;
-			/*width: 700px;*/
-
-		}
-
-		#g4{
-			width:250px;
-			height:250px;
-		}
-
 		#P1{
 			text-decoration:none;
 			text-align:left;
 		}
 
 		#div-B{
-			background-color:rgb(000, 111, 0);
+			background: linear-gradient(90deg,
+ 			rgba(251, 0, 140, 1) 0%,
+    		rgba(246, 240, 14, 1) 100%
+  		);
 			padding:30px;
 		}
 
 		#h1-brands {
 			text-align: center;
 		}
+
+		a{
+			text-decoration: none;
+		}
+
+	.slider {
+        width:100vw;
+        height:500px;
+        background: none !important;
+        margin-top: 0px;
+        text-align: center;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+      }
+
+      .image-container {
+        width:300vw;
+        padding: 0;
+        background-color: pink;
+        height:100%;
+        clear: both;
+        display: flex;
+        position: relative;
+        -webkit-transition: left 2s;
+        -moz-transition: left 2s;
+        -o-transition: left 2s;
+        transition: left 2s;
+      }
+
+      .slide {
+        float: left;
+        margin: 0px;
+        padding: 0px;
+        position: relative;
+        width:100vw;
+        height:100%;
+      }
+
+      #slide-1:target ~ .image-container {
+        left: 0px;
+      }
+
+      #slide-2:target ~ .image-container {
+        left: -100vw;
+      }
+
+      #slide-3:target ~ .image-container {
+        left: -200vw;
+      }
+
+      .buttons {
+
+        position: absolute;
+        bottom: 0;
+        width:100%;
+        background: rgba(0,0,0,0.3);
+/*        top: -10px;*/
+/*        display: none;*/
+      }
+
+      .buttons a {
+        display: inline-block;
+        height: 15px;
+        width: 15px;
+        border-radius: 50px;
+        background-color: lightgreen;
+      }
+
+      #payway{
+      	width:60px;
+      	height:40px;
+      }
+
+      @media(max-width:500px){
+      	#hr-d{
+      		margin-left:10px;
+      	}
+      }
 		
 	</style>
 </head>
@@ -295,7 +375,6 @@
 	</header>
 
 	<hr>
-	<br>
 	<div id="div-4">
 	<pre id="pre1"><b>Best Collections</b>
 Discover our most popular
@@ -306,8 +385,21 @@ eyewear for men and women.
 	<a href="glasses.html"><button id="btn1">SHOP NOW</button></a>
 	</div>
 
-	<img class="mySlides w3-animate-top" id="mid-img" src="g1.jpeg">
-	<img class="mySlides w3-animate-bottom" >
+	<div class="slider">
+      <span id="slide-1"></span>
+      <span id="slide-2"></span>
+      <span id="slide-3"></span>
+      <div class="image-container">
+        <img src="g1.jpeg" class="slide" width="500" height="300" />
+        <img src="g12.jpeg" class="slide" width="500" height="300" />
+        <img src="g13.jpg" class="slide" width="500" height="300" />
+      </div>
+      <div class="buttons">
+        <a href="#slide-1"></a>
+        <a href="#slide-2"></a>
+        <a href="#slide-3"></a>
+      </div>
+    </div>
 	
 	<br>
 	<br>
@@ -325,17 +417,20 @@ eyewear for men and women.
 
 	<div class="w3-container" id="div-6">
 
+		<a href="glasses.html">
 		<div class="w3-card-4 w3-hover-shadow w3-hover-opacity ">
   			<img src="g5.jpeg" alt="Alps" style="width:210px; height:220px;">
-		</div>
+		</div></a>
 
+		<a href="glasses.html">
 		<div class="w3-card-4 w3-hover-shadow w3-margin-left w3-hover-opacity">
   			<img src="p4.jpg" alt="Alps" style="width:210px; height:220px;">
-		</div>
+		</div></a>
 
+		<a href="glasses.html">
 		<div class="w3-card-4 w3-hover-shadow w3-margin-left w3-hover-opacity">
   			<img src="g3.jpeg" alt="Alps" style="width:210px; height:220px;">
-		</div>
+		</div></a>
 
 	</div>
 
@@ -344,51 +439,59 @@ eyewear for men and women.
 	<h1 id="gl">GLASSES</h1>
 	<hr id="hr-d">
 	<div id="div-7">
+		
+				<a href="glasses.html">
 		<div class="w3-card-4 w3-hover-shadow w3-hover-opacity w3-margin-left">
   			<img src="g6.jpeg" alt="Alps" style="width:250px; height:270px;">
   			<div class="w3-container w3-center w3-cursive">
   			<p id="div-p">EyeGlasses</p>
   			</div>
-		</div>
+		</div></a>
 
+		<a href="glasses.html">	
 		<div id="s1" class="w3-card-4 w3-hover-shadow w3-hover-opacity w3-margin-left">
   			<img src="g9.jpeg" alt="Alps" style="width:250px; height:270px;">
   			<div class="w3-container w3-center w3-cursive">
   			<p id="div-p">SunGlasses</p>
   			</div>
-		</div>
+		</div></a>
 
+		<a href="glasses.html">	
 		<div class="w3-card-4 w3-hover-shadow w3-hover-opacity w3-margin-left">
   			<img src="g8.jpeg" alt="Alps" style="width:250px; height:270px;">
   			<div class="w3-container w3-center w3-cursive">
   			<p id="div-p">Computer Glasses</p>
   			</div>
-		</div>
+		</div></a>
 	</div>
 
 	<br>
 
 	<div id="div-8">
+
+		<a href="glasses.html">		
 		<div class="w3-card-4 w3-hover-shadow w3-hover-opacity w3-margin-left">
   			<img src="g7.jpeg" alt="Alps" style="width:250px; height:270px;">
   			<div class="w3-container w3-center w3-cursive">
   			<p id="div-p">Reading Glasses</p>
   			</div>
-		</div>
+		</div></a>
 
+		<a href="glasses.html">
 		<div id="l1" class="w3-card-4 w3-hover-shadow w3-hover-opacity w3-margin-left">
   			<img src="g10.jpg" alt="Alps" style="width:250px; height:270px;">
   			<div class="w3-container w3-center w3-cursive">
   			<p id="div-p">Contact Lenses</p>
   			</div>
-		</div>
+		</div></a>
 
+		<a href="glasses.html">
 		<div class="w3-card-4 w3-hover-shadow w3-hover-opacity w3-margin-left">
   			<img src="p1.jpg" alt="Alps" style="width:250px; height:270px;">
   			<div class="w3-container w3-center w3-cursive">
   			<p id="div-p">Accessories</p>
   			</div>
-		</div>
+		</div></a>
 	</div>
 
 
@@ -412,20 +515,7 @@ eyewear for men and women.
 		<p id="P1">Eyewear shopping online can be a daunting task. After all, it is something you wear every day; hence, something that affects your quality of life daily. We have been the market leader in designer eyewear for over 10 years. Shopping with us means that your new eyeglasses will have 100% prescription accuracy, thanks to the expertise of our in-house opticians. Moreover, our best price guarantee ensures that you get your favourite frames at the lowest price online. Shop the best computer glasses, reading glasses or designer sunglasses with us.
 		</p>
 	</div>
-
-
-	<br>
-	<div id="div-10">
-		<span>
-			<h3>HOW WE GIVE BACK</h3>
-			<pre>Focus Eyefit Collection is supporting world vision's mother and 
-			chlid program in Africa, which aims to reach over 200000 mothers 
-		and chlidren in the next three years with 
-	life-saving interventions.</pre>
-		</span>
-		
-		<img id="g4" src="g4.jpeg">
-	</div>
+	
 	<hr>
 
 	<!-- bottom div -->
@@ -461,42 +551,46 @@ join for exclusive offer & discount!</b></pre>
 				<tr>
 					<td></td>
 					<td colspan="2" align="left">CONTACT WITH US</td>
-					<td></td>
+					<td align="left">WE ACCEPT</td>
 				</tr>
 
 				<tr>
 					<td>Philipps-Universitat Marburg</td>
 					<td><i class="fa fa-phone"></i></td>
 					<td align="left">+045-333-045</td>
-					<td>ghahhh</td>
+					<td><img align="left" id="payway" src="visa.jpg"></td>
 				</tr>
 
 				<tr>
 					<td>Biegenstrabe 10</td>
-					<td><i class="fas fa-clock"></td>
+					<td><i class="fas fa-clock-o"></td>
 					<td align="left">10AM to 7PM</td>
-					<td>ghahhh</td>
+					<td><img align="left" id="payway" src="paypal.jpg"></td>
 				</tr>
 
 				<tr>
 					<td>35037 Marburg</td>
 					<td><i class="fa fa-whatsapp"></i></td>
 					<td align="left">71*****670</td>
-					<td>ghahhh</td>
+					<td><img align="left" id="payway" src="paytm.png"></td>
 				</tr>
 
 				<tr>
 					<td></td>
 					<td><i class="fa fa-telegram"></i></td>
 					<td align="left">Focus Eyefit</td>
-					<td>ghahhh</td>
+					<td><img align="left" id="payway" src="master.png"></td>
 				</tr>
 
 				<tr>
 					<td></td>
 					<td><i class="fa fa-envelope"></i></td>
 					<td align="left">focuseyefit@12.com</td>
-					<td>ghahhh</td>
+					<td><img align="left" id="payway" src="phnpay.jpg"></td>
+				</tr>
+
+				<tr>
+					<td colspan="4">Focus Eyefit &#8482; Group Copyright &#169; All Rights Reserved</td>
 				</tr>
 			</table>
 
@@ -505,5 +599,7 @@ join for exclusive offer & discount!</b></pre>
 		</div>
 
 	</footer>
+
+	
 </body>
 </html>

@@ -9,6 +9,10 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
+	html {
+			scroll-behavior: smooth;
+		}
+
 	#title{
 			/*background-color:orange;*/
 			padding:3px;
@@ -42,6 +46,7 @@
 			top:0;
 			background:white;
 			z-index:9;
+			box-shadow: -6px 0 white, 6px 0 white, 0 7px 5px -1px black;
 		}
 
 
@@ -94,6 +99,7 @@
 	}
 
 	#icon-s {
+		margin-top:-4px;
 		height:40px;
 		width:40px;
 
@@ -108,7 +114,7 @@
 
 	#div-6{
 		width:50%;
-		margin-left: 320px;
+		margin-left:320px;
 		background: #D3D3D3;
 		text-align: left;
 		border-radius: 5px;
@@ -215,8 +221,11 @@
 		}
 
 	#qa{
-		background-image:url(p5.jpg);
-		
+		margin:auto;
+		background:#D3D3D3;
+		width:50%;
+		margin-left:320px;
+		border-radius:10px;
 	}
 
 	.img {
@@ -233,12 +242,39 @@
 	#tab1 {
 			width:1330px;
 			font-size:20px;
+			font-family:cursive;
 		}
 
 	#d-f1{
 			background-color: black;
 			color: white;
 		}
+
+	.myDIV {
+		background: transparent;
+		width:55%;
+		margin-left:150px;
+		text-align: left;
+		border-bottom:1px solid black;
+	}
+
+	.hide {
+  		display: none;
+  		width:55%;
+  		text-align: left;
+		margin-left:150px;
+		}
+
+	.myDIV:hover + .hide {
+  		display: block;
+  		color: red;
+  		background: transparent;
+		}
+
+	#payway{
+      	width:60px;
+      	height:40px;
+      }
 
 	</style>
 </head>
@@ -260,7 +296,7 @@
 		<h2><a id="head-a" href="sungl.html">Sunglasses</a></h2>
 		<h2><a id="head-a" href="lenses.html">Lenses</a></h2>
 		<h2><a id="head-a" href="brands.html">Brands</a></h2>
-		<h2><a id="head-a" href="contacts.html">Contacts</a></h2>
+		<h2><a id="head-a" href="helpcenter.html">Contacts</a></h2>
 
 		<div id="div-3">
 			<input id="input-1" type="text" name="" placeholder="search over 70,000 products...">
@@ -340,7 +376,35 @@
 
 	<div id="qa">
 		<h3>EASY SOLUTION</h3>
+
+		<div class="myDIV">How do I open a membership account?</div>
+		<div class="hide">We're happy to hear you want to join the SmartBuyGlasses Club! Opening an account is really simple;After you place your order with us, we automatically create an account and send you an activation email. </div>
+		<br>
+
+		<div class="myDIV">Where are you located?</div>
+		<div class="hide">We’ll ship your order from one of our 4 logistics facilities around the world depending on where the product is originally sourced. Our goal is to get the product to you as quickly and efficiently as possible!</div>
+		<br>
+
+		<div class="myDIV">Do I have to pay any custom duties?</div>
+		<div class="hide">No way! That’s on us. If in the unlikely event that your parcel is held by customs and you are notified you have to pay additional customs duties, we will 100% fully reimburse the costs. All you need to do is request a formal invoice once you have paid, and submit a copy to our customer services team so that we can sort out your reimbursement.</div>
+		<br>
+
+		<div class="myDIV">How do I find my order number?</div>
+		<div class="hide">After placing your order you will receive an email within 24 hours that lists your unique order number. It will consist of two letters, followed by 10 numerical digits, and then one or two more letters. 
+
+So, it will look something like this: IN0123456789G.</div>
+		<br>
+
+		<div class="myDIV">Where is my order?</div>
+		<div class="hide">As soon as your order is shipped, you will receive an email with the tracking information so that you can know where your purchase is at any moment.</div>
+		<br>
+
+		<div class="myDIV">What is your Return Policy?</div>
+		<div class="hide">Let's face it — buying from the internet can be difficult and time-consuming. Therefore, we've introduced a hassle-free process which includes a 100 days return policy for your order (prescription lenses are also included). </div>
+		<br>
+
 	</div>
+	<hr>
 
 	<div id="div-7">
 		
@@ -389,42 +453,46 @@ join for exclusive offer & discount!</b></pre>
 				<tr>
 					<td></td>
 					<td colspan="2" align="left">CONTACT WITH US</td>
-					<td></td>
+					<td align="left">WE ACCEPT</td>
 				</tr>
-				
+
 				<tr>
 					<td>Philipps-Universitat Marburg</td>
 					<td><i class="fa fa-phone"></i></td>
 					<td align="left">+045-333-045</td>
-					<td>ghahhh</td>
+					<td><img align="left" id="payway" src="visa.jpg"></td>
 				</tr>
 
 				<tr>
 					<td>Biegenstrabe 10</td>
-					<td><i class="fa fa-clock"></td>
+					<td><i class="fas fa-clock-o"></td>
 					<td align="left">10AM to 7PM</td>
-					<td>ghahhh</td>
+					<td><img align="left" id="payway" src="paypal.jpg"></td>
 				</tr>
 
 				<tr>
 					<td>35037 Marburg</td>
 					<td><i class="fa fa-whatsapp"></i></td>
 					<td align="left">71*****670</td>
-					<td>ghahhh</td>
+					<td><img align="left" id="payway" src="paytm.png"></td>
 				</tr>
 
 				<tr>
 					<td></td>
 					<td><i class="fa fa-telegram"></i></td>
 					<td align="left">Focus Eyefit</td>
-					<td>ghahhh</td>
+					<td><img align="left" id="payway" src="master.png"></td>
 				</tr>
 
 				<tr>
 					<td></td>
 					<td><i class="fa fa-envelope"></i></td>
 					<td align="left">focuseyefit@12.com</td>
-					<td>ghahhh</td>
+					<td><img align="left" id="payway" src="phnpay.jpg"></td>
+				</tr>
+
+				<tr>
+					<td colspan="4">Focus Eyefit &#8482; Group Copyright &#169; All Rights Reserved</td>
 				</tr>
 			</table>
 
